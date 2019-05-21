@@ -122,4 +122,17 @@ function isTallEnough(num) {
 //console.log(isTallEnough(32));
 console.log(isTallEnough(66));
 
+//ex 8
+/*Write a function favoriteDessert which takes in no arguments, but returns an object
+with 3 key-value pairs. The names of each property and their respective values are up to you,
+but the values can't be undefined. How would you desdribe your favorite dessert?*/
 
+function favoriteDessert() {
+    return {
+        name: "Icecream Sundae",
+        baseIngred: "Breyers Natural Vanilla",
+        topping:  "crushed English toffee"
+    }
+}
+console.log(favoriteDessert()); //Note Lesson Learned, be sure when not passing an argument into a function,
+//that you invoke () the object when calling the function.
