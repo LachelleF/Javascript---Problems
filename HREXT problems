@@ -104,3 +104,39 @@ function letterCount(str, char) {
 //console.log(letterCount("abracadabra", "d")); //1
 console.log(letterCount("hello", "l"));//2
 
+//==========================================================
+//------------------------Problem07-------------------------
+//==========================================================
+
+/*
+Write a function, minuteConversion, that accepts a whole number of minutes and returns a string 
+with a human readable string of hours and minutes.
+
+If the number of minutes is more than 60, the minutes should be converted to hours. 
+For both hours and minutes, the correct plural/singular form should be used, and if the value of 
+hours or minutes is zero, the word should be omitted entirely. See the test cases for more details.
+*/
+
+function minuteConversion(mins) {
+    if (mins <= 1) {
+        return min + ' minute';
+    }
+    if (mins < 60) {
+        return min + ' minutes';
+    }
+    if (mins >= 60) {
+        //convert minutes to hours
+        var hours = Math.floor(mins/60);
+        //identify remaining minutes (number of hours * 60) - total minutes (min)) = remaining minutes
+        var remainMins = (mins - (hours * 60));
+        //return string of hours and minutes
+        return hours + " hours and " + remainMins + " minutes"
+    }
+}
+
+//console.log(minuteConversion(35));
+//console.log(minuteConversion(120));
+console.log(minuteConversion(121));
+
+
+
