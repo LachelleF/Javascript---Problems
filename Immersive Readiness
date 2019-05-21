@@ -107,3 +107,19 @@ console.log(dogsIWouldPet("ottoman")); //I would pet dogs no bigger than an otto
 //dogsIWouldPet("small horse"); //I would pet dogs no bigger than a small horse.
 //dogsIWouldPet("Terrier"); //I would pet dogs no bigger than a Terrier.
 
+//ex 7
+/*Write a function isTallEnough which takes in a height (number) in inches, and returns
+true if the input is >= 48" and false if < 48"
+*/
+
+function isTallEnough(num) {
+    if(num >= 48) {
+        return true;
+    }
+    return false;
+}
+//console.log(isTallEnough(48));
+//console.log(isTallEnough(32));
+console.log(isTallEnough(66));
+
+
