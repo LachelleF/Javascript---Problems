@@ -156,3 +156,40 @@ function countNumStrings(arr){
 console.log(countNumStrings(["hello", "world", 5, true, {}]));
 //console.log(countNumStrings(["foo", 2, 10, "bar", 5, false, {}, "baz"]));
 //countNumStrings(["There is only one string in this example"]);
+
+// //ex 10
+// /*Write a function listLengthOfAllWords which takes in an array of words (strings), and
+// returns an array of numbers representing the length of each word.*/
+// //calling function should result in provided outputs.
+
+// function listLengthOfAllWords(array) {
+// //create a new array to hold #s
+//     var wordLengths = [];
+// //iterate thru the array
+//     for (var i = 0; i < array.length; i++) { 
+// //evalue the length of each element
+//     wordLengths.push(array[i].length);   
+//     }
+// //push/store the ele length(num) into new array
+//     return wordLengths;
+// }
+
+// console.log(listLengthOfAllWords(['hello', 'world', 'I', 'can', 'code'])); //5, 5, 1, 3, 4
+
+/*If I was asked to return the longest word in the array?*/
+/*Should clarify what to do if words are the same length. return the 1st? or return the 2nd.*/
+function longestOfAllWords(array) {
+    var longestWord = '';
+    var longestWordLength = 0;
+    for (var i = 0; i < array.length; i++){
+        if ((array[i].length > longestWordLength) || (array[i].length === longestWordLength)) {
+            longestWord = array[i];
+            longestWordLength = array[i].length;
+        }
+    }
+    return longestWord;
+}
+console.log(longestOfAllWords(['hello', 'world', 'I', 'can', 'code'])); //5, 5, 1, 3, 4
+//NOTE: lesson learned, need to account for all cases. e.g. what if words are same length?
+//In this case, we chose to go with 2nd word. But if we were asked to return the 1st longest
+//word, would create seperate if/else condition with expression that requires no change to new array
