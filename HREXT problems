@@ -83,3 +83,24 @@ function addNickname(obj, str){
 }
 console.log(addNickname({name: 'Scout', breed: 'Husky'}, 'Scouterpants'));
 
+//==========================================================
+//------------------------Problem06-------------------------
+//==========================================================
+
+/*
+/*Write a function, letterCount, that accepts a lowercase string and a lowercase letter, and 
+returns the count of that letter in the string.
+*/
+function letterCount(str, char) {
+    var charCount = 0;
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] === char) {
+            charCount += 1;
+        }
+    }
+    return charCount;
+}
+//console.log(letterCount("paper plates", "p")); //3
+//console.log(letterCount("abracadabra", "d")); //1
+console.log(letterCount("hello", "l"));//2
+
