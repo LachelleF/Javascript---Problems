@@ -1,0 +1,48 @@
+// ex 1 Write a function identity which expects 1 argument and simply returns that input value.
+// Calling your function should result in:
+
+function identity(input) {
+    return input;
+}
+
+identity("Hello world");
+identity(500);
+
+// ex 2
+// Write a function coffeeLover which takes in a boolean value, and returns the string "Enjoy a cup for free!"
+// if the input is true, or "Take a look at our other drinks!" if the input is false.
+
+var coffeeLover(input) {
+    if (input === true) {
+        return "Enjoy a cup of coffee for free!";
+    }
+    return "Take a look at our other drinks!";
+}
+
+coffeeLover(true);
+coffeeLover(false);
+
+// ex 3 Write a function coffeeLoverExtended which takes in an object with the structure like:
+var customer001 = {
+    name: "John Riley",
+    ticketNumber: "AO1",
+    enjoysCoffee: true
+};
+
+var customer002 = {
+    name: "Harold Crane",
+    ticketNumber: "A02",
+    enjoysCoffee: false
+};
+
+function coffeeLoverExtended(obj){
+    if (obj.enjoysCoffee === true) {
+        return "Enjoy a cup for free!";
+    }
+    return "Take a look at our other drinks.";
+}
+var output = coffeeLoverExtended(customer002);
+console.log(output);
+
+coffeeLoverExtended(customer001); //"Enjoy a cup for free!"
+coffeeLoverExtended(customer002); //"Take a look at our other coffees."
