@@ -1,0 +1,30 @@
+//==========================================================
+//------------------------Problem01-------------------------
+//==========================================================
+
+/*
+Write a function that accepts an array of numbers and returns the average of the numbers in the array.
+*/
+function avgNums(array) {
+    sumNums = 0;
+    for (var i = 0; i < array.length; i++) {
+        sumNums += array[i];
+    }
+    return sumNums/array.length;
+}
+console.log(avgNums([2, 4, 6, 8]));
+
+
+//==========================================================
+//------------------------Problem02-------------------------
+//==========================================================
+
+/*
+Write a function, exclaim, that takes in an array of strings representing a sentence and 
+modifies the array so that the last element in the array is a "!".
+*/
+
+function exclaim(array) {
+    array.push("!");
+}
+console.log(exclaim(["I", "love", "to", "code"]));
