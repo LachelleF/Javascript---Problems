@@ -6,7 +6,7 @@
 Write a function that accepts an array of numbers and returns the average of the numbers in the array.
 */
 function avgNums(array) {
-    sumNums = 0;
+    var sumNums = 0;
     for (var i = 0; i < array.length; i++) {
         sumNums += array[i];
     }
@@ -29,7 +29,6 @@ function exclaim(array) {
 }
 console.log(exclaim(["I", "love", "to", "code"]));
 
-
 //==========================================================
 //------------------------Problem03-------------------------
 //==========================================================
@@ -45,8 +44,8 @@ var myBills = {
     rent:   3000
 }
 function budget (obj) {
-    sumBills = 0;
-    for (let bill of Object.values(myBills)) { //using for...of loop. NOTE: lesson learned - looked up Object.values
+    var sumBills = 0;
+    for (let bill of Object.values(myBills)) { //using for...of loop
         sum += bill;
     }
     return sumBills;
@@ -67,6 +66,7 @@ function getFirstName(obj) {
 }
 
 console.log(getFirstName({breed: 'Husky', firstName: 'Scout', age: 9}));
+
 
 //==========================================================
 //------------------------Problem05-------------------------
@@ -114,7 +114,7 @@ with a human readable string of hours and minutes.
 
 If the number of minutes is more than 60, the minutes should be converted to hours. 
 For both hours and minutes, the correct plural/singular form should be used, and if the value of 
-hours or minutes is zero, the word should be omitted entirely. 
+hours or minutes is zero, the word should be omitted entirely. See the test cases for more details.
 */
 
 function minuteConversion(mins) {
@@ -126,7 +126,7 @@ function minuteConversion(mins) {
     }
     if (mins >= 60) {
         //convert minutes to hours
-        var hours = Math.floor(mins/60); //Note: lesson learned. Need to know these fundamental methods super well.
+        var hours = Math.floor(mins/60);
         //identify remaining minutes (number of hours * 60) - total minutes (min)) = remaining minutes
         var remainMins = (mins - (hours * 60));
         //return string of hours and minutes
@@ -145,8 +145,6 @@ console.log(minuteConversion(121));
 /*
 Write a function, sum, which accepts any amount of numbers as individual arguments 
 and returns the result of adding all of the numbers together.
-Note: Lesson learned had not used ...rest paramters yet. Was super helpful. Need to study/read MDN examples to ensure
-I have a solid sense of how to use it and what is actually happening when I do.
 */
 function sum(...restArgs) {
     var newSum = 0;
@@ -156,4 +154,3 @@ function sum(...restArgs) {
     return newSum;
 }
 console.log(sum(4, 5, 6, 2, 3));
-
