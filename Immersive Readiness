@@ -46,3 +46,45 @@ console.log(output);
 
 coffeeLoverExtended(customer001); //"Enjoy a cup for free!"
 coffeeLoverExtended(customer002); //"Take a look at our other coffees."
+
+//ex 4 
+/*write a function convertToKilometers which expects a number of miles to be passed in,
+and returns the number multiplied by 1.60934 (appx 1 mile in km)*/
+
+function convertToKilometers(miles) {
+    console.log(miles * 1.60934);
+}
+//convertToKilometers(50); //80.467
+convertToKilometers(361); //500.973
+
+//ex 5
+/*Write a function isGoodFreeThrowShooter which takes in a shooting percentage as a number
+you can assume will be between 0 and 1; exclusive of 1 and returns based on following criteria
+>=0 and < 1
+if the number is btw 0 = 0.65, return "Horrible freethrow shooter"
+if the number is btw 0.65 - 0.80 return "Decent freethrow shooter"
+if the number is btw 0.80 - and 1.00 return "Great freethrow shooter"*/
+/*
+Each range is inclusive of the lower bound, and exclusive of the upper -- in other words, 
+0.65 is counted as a "Decent freethrow shooter" (not "Horrible freethrow shooter") and 0.80 is 
+considered a "Great freethrow shooter" (not "Decent freethrow shooter"). Additionally, you can get a number 
+as high as 0.99, but never 1 (this is what the original problem statement means by "exclusive of 1").
+
+Calling your function should result in:*/
+
+function isGoodFreeThrowShooter(percentage) {
+    if(num >= 0 && num < 0.65) { 
+        return "Horrible freethrow shooter";
+    }
+    if(num >= 0.65 && num < 0.80) {
+        return "Decent freethrow shooter";
+    }
+    if(num >= 0.80 && num < 1.00) {
+        return "Great freethrow shooter";
+    }
+}
+
+isGoodFreeThrowShooter(0.30);
+isGoodFreeThrowShooter(0.89);
+isGoodFreeThrowShooter(0.75);
+
