@@ -88,3 +88,22 @@ isGoodFreeThrowShooter(0.30);
 isGoodFreeThrowShooter(0.89);
 isGoodFreeThrowShooter(0.75);
 
+//ex 6
+/*Write a function dogsIWouldPet that takes in a an item (string) and 
+returns a sentence (string) stating dogs you would pet in comparison to the item.
+Bonus (extra): If your function were passed in a string "I do not like dogs", you can 
+have your function return "I would not pet dogs".*/
+
+function dogsIWouldPet(str) {
+    if (str === "I do not like dogs.") {
+        return "I would not pet dogs."
+    }
+    else { 
+        return `I would pet dogs no bigger than a ${str}.`
+    }
+}
+
+console.log(dogsIWouldPet("ottoman")); //I would pet dogs no bigger than an ottoman.
+//dogsIWouldPet("small horse"); //I would pet dogs no bigger than a small horse.
+//dogsIWouldPet("Terrier"); //I would pet dogs no bigger than a Terrier.
+
