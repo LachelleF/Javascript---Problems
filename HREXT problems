@@ -28,3 +28,58 @@ function exclaim(array) {
     array.push("!");
 }
 console.log(exclaim(["I", "love", "to", "code"]));
+
+
+//==========================================================
+//------------------------Problem03-------------------------
+//==========================================================
+
+/*
+Write a function, totalSpent that accepts an object with key/value pairs where the keys 
+are budget categories and the values are all numbers, and returns the total spent across
+all budget categories.
+*/
+var myBills = {
+    gas: 40,
+    electric: 100,
+    rent:   3000
+}
+function budget (obj) {
+    sumBills = 0;
+    for (let bill of Object.values(myBills)) { //using for...of loop. NOTE: lesson learned - looked up Object.values
+        sum += bill;
+    }
+    return sumBills;
+}
+console.log(budget(myBills));
+
+
+//==========================================================
+//------------------------Problem04-------------------------
+//==========================================================
+
+/*
+Write a function, getFirstName, that takes an object and returns the value associated 
+with the key ‘firstName’.
+*/
+function getFirstName(obj) {
+    return obj.firstName;
+}
+
+console.log(getFirstName({breed: 'Husky', firstName: 'Scout', age: 9}));
+
+//==========================================================
+//------------------------Problem05-------------------------
+//==========================================================
+
+/*
+Write a function, addNickname, that accepts an object and a string and adds the string 
+as a property on the object, where the key is “nickname” and the value is the string that was passed in.
+*/
+
+function addNickname(obj, str){
+    obj.nickname = str;
+    return obj;
+}
+console.log(addNickname({name: 'Scout', breed: 'Husky'}, 'Scouterpants'));
+
