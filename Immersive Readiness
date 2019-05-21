@@ -136,3 +136,23 @@ function favoriteDessert() {
 }
 console.log(favoriteDessert()); //Note Lesson Learned, be sure when not passing an argument into a function,
 //that you invoke () the object when calling the function.
+
+//ex 9
+/* Write a function countNumStrings which takes in an array of mixed elements (different data
+    types), and returns the number of strings there are in an array.*/
+    
+function countNumStrings(arr){
+    //returning a number/count of strings
+    numStrings = 0;
+    //loop through the array
+    for (var i = 0; i < arr.length; i ++) {
+        //evaluate each element to verify if string
+        if(typeof arr[i] === 'string') {
+            numStrings += 1;
+        }
+    }
+    return numStrings;
+}
+console.log(countNumStrings(["hello", "world", 5, true, {}]));
+//console.log(countNumStrings(["foo", 2, 10, "bar", 5, false, {}, "baz"]));
+//countNumStrings(["There is only one string in this example"]);
