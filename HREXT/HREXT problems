@@ -99,7 +99,7 @@ function letterCount(str, char) {
         }
     }
     return charCount;
-}
+} 
 //console.log(letterCount("paper plates", "p")); //3
 //console.log(letterCount("abracadabra", "d")); //1
 console.log(letterCount("hello", "l"));//2
@@ -154,3 +154,69 @@ function sum(...restArgs) {
     return newSum;
 }
 console.log(sum(4, 5, 6, 2, 3));
+
+//==========================================================
+//------------------------Problem09-------------------------
+//==========================================================
+/*
+Write a function, intersection, that takes two arrays and returns a new array containing 
+only the values that are in both arrays.
+a:  check array 1 elements against array 2
+ i: two or more arrays
+o: a union or intersection of shared elements
+e: one array might be longer than the other
+*/
+function intersection (array1, array2) {
+    
+    var intersectSet = [];
+    for (var i = 0; i < array1.length; i ++) {
+        for (var j = 0; j < array2.length; j++) {
+            if (array1[i] === array2[j]) { 
+                intersectSet.push(array1[i]); 
+            }
+        }
+    }
+    return intersectSet;
+}
+//console.log(intersection(['a', 'b', 'c', 'f', 'g'], ['d', 'b', 'c', 'd', 'e'])); // --> ['b', 'c']
+console.log(intersection([1, 4, 6, 2], [10, 9, 4, 1, 5, 6])); // --> [1, 4, 6]
+
+//==========================================================
+//------------------------Problem10-------------------------
+//==========================================================
+
+/*
+Write a function, transformAndRepeat that takes a string, a transformer function, 
+and a number, and returns the result of invoking the transformer function with the string, repeated number times.
+
+See the tests for additional examples.
+*/
+
+
+
+console.log(transformAndRepeat('HELLO', lowerCase, 3)); // --> 'hellohellohello'
+console.log(transformAndRepeat('doggo', firstLetter, 6)); // --> 'dddddd'
+console.log(transformAndRepeat('hi', exclaim, 4)); // --> 'hi! hi! hi! hi! 
+
+//==========================================================
+//------------------------Problem11-------------------------
+//==========================================================
+
+/*
+Write a function, that takes in an array, which has an object that contains an array in it.
+Then access the data or values at the deepest level of the array.
+
+*/
+
+//==========================================================
+//------------------------Problem12-------------------------
+//==========================================================
+
+/*
+Write a function, that takes in an object, which has an array that contains an object in it.
+Then access the data or values at the deepest level of the object.
+
+*/
+
+
+
